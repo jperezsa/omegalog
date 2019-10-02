@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 ```
 Create folder /var/log/omega
 Change Owner and Group to www-data or Apache User.
-Change Permisions to the foler for 775
+Change Permisions to the folder for 775
 ```
 
 ### Installing
