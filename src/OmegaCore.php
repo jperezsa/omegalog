@@ -18,8 +18,12 @@ class OmegaCore {
      *
      * @return void
      */
-    public function showMessage($level,$message,$params,$path)
+    public function showMessage($level,$message,Array $params,$path)
     {
+        if(is_array($message)){
+            $params = $message;
+            $message = '';
+        }
         
         return error_log("[".self::datetimeFormat()."] [".self::getIpClient()."] [$level] - {$message}\n".self::showArray($params),3,self::fileNameForLog($path));
 
@@ -34,6 +38,10 @@ class OmegaCore {
      */
     public function showArray(Array $array)
     {
+        if(empty($array)){
+            
+            return null;
+        }
 
         return print_r($array,true);
 

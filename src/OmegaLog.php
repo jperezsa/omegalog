@@ -71,7 +71,7 @@ class OmegaLog implements LoggerInterface
      *
      * @return void
      */
-    public function alert($message, array $params = array())
+    public function alert($message=null, array $params = array())
     {
     
         return OmegaCore::showMessage('alert',$params,$this->path);
@@ -86,7 +86,7 @@ class OmegaLog implements LoggerInterface
      *
      * @return void
      */
-    public function critical($message, array $params = array())
+    public function critical($message=null, array $params = array())
     {
 
         return OmegaCore::showMessage('critical',$message,$params,$this->path);
@@ -101,7 +101,7 @@ class OmegaLog implements LoggerInterface
      *
      * @return void
      */
-    public function warning($message, array $params = array())
+    public function warning($message=null, array $params = array())
     {
 
         return OmegaCore::showMessage('warning',$message,$params,$this->path);
@@ -116,7 +116,7 @@ class OmegaLog implements LoggerInterface
      *
      * @return void
      */
-    public function notice($message, array $params = array())
+    public function notice($message=null, array $params = array())
     {
 
         return OmegaCore::showMessage('notice',$message,$params,$this->path);
@@ -131,7 +131,7 @@ class OmegaLog implements LoggerInterface
      *
      * @return void
      */
-    public function info($message, array $params = array())
+    public function info($message=null, array $params = array())
     {
         return OmegaCore::showMessage('info',$message,$params,$this->path);
 
@@ -145,7 +145,7 @@ class OmegaLog implements LoggerInterface
      *
      * @return void
      */
-    public function debug($message, array $params = array())
+    public function debug($message=null, array $params = array())
     {
 
         return OmegaCore::showMessage('debug',$message,$params,$this->path);
@@ -161,7 +161,7 @@ class OmegaLog implements LoggerInterface
      *
      * @return void
      */
-    public function log($level, $message, array $params = array())
+    public function log($level, $message=null, array $params = array())
     {
 
         return OmegaCore::showMessage($level,$message,$params,$this->path);
