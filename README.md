@@ -18,7 +18,7 @@ Change Permisions to the folder for 775
 
 Whit Composer
 ```
-composer require omega/omegalog
+composer require probyte/omegalog
 ```
 
 

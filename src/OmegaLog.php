@@ -25,7 +25,7 @@ class OmegaLog implements LoggerInterface
      *
      * @return void
      */
-    function __construct($prefix='omega',$folder='/var/log/omega') 
+    function __construct($prefix='omegalog',$folder='/var/log/omegalog') 
     {
         $this->prefix = $prefix;
         $this->folder = $folder;
