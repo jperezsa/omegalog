@@ -9,7 +9,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 ```
-Create folder /var/log/omega
+Create folder /var/log/omegalog
 Change Owner and Group to www-data or Apache User.
 Change Permisions to the folder for 775
 ```
