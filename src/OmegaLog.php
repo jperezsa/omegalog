@@ -15,6 +15,7 @@ class OmegaLog implements LoggerInterface
 {
     private $prefix;
     private $folder;
+    private $omegaLog;
 
    
     /**
@@ -27,6 +28,7 @@ class OmegaLog implements LoggerInterface
      */
     function __construct($prefix='omegalog',$folder='/var/log/omegalog') 
     {
+        $this->omegaLog = new OmegaCore();
         $this->prefix = $prefix;
         $this->folder = $folder;
         $this->path = $this->folder.'/'.$this->prefix.'_';
@@ -44,7 +46,7 @@ class OmegaLog implements LoggerInterface
     public function error($message=null, array $params = array())
     {   
         
-        return OmegaCore::showMessage('error',$message,$params,$this->path);
+        return $this->omegaLog->showMessage('error',$message,$params,$this->path);
     
     } 
 
@@ -59,7 +61,7 @@ class OmegaLog implements LoggerInterface
     public function emergency($message, array $params = array())
     {
 
-        return OmegaCore::showMessage('emergency',$message,$params,$this->path);
+        return $this->omegaLog->showMessage('emergency',$message,$params,$this->path);
 
     }
 
@@ -74,7 +76,7 @@ class OmegaLog implements LoggerInterface
     public function alert($message=null, array $params = array())
     {
     
-        return OmegaCore::showMessage('alert',$params,$this->path);
+        return $this->omegaLog->showMessage('alert',$params,$this->path);
 
     }
 
@@ -89,7 +91,7 @@ class OmegaLog implements LoggerInterface
     public function critical($message=null, array $params = array())
     {
 
-        return OmegaCore::showMessage('critical',$message,$params,$this->path);
+        return $this->omegaLog->showMessage('critical',$message,$params,$this->path);
 
     }
     
@@ -104,7 +106,7 @@ class OmegaLog implements LoggerInterface
     public function warning($message=null, array $params = array())
     {
 
-        return OmegaCore::showMessage('warning',$message,$params,$this->path);
+        return $this->omegaLog->showMessage('warning',$message,$params,$this->path);
 
     }
     
@@ -119,7 +121,7 @@ class OmegaLog implements LoggerInterface
     public function notice($message=null, array $params = array())
     {
 
-        return OmegaCore::showMessage('notice',$message,$params,$this->path);
+        return $this->omegaLog->showMessage('notice',$message,$params,$this->path);
 
     }
 
@@ -133,7 +135,7 @@ class OmegaLog implements LoggerInterface
      */
     public function info($message=null, array $params = array())
     {
-        return OmegaCore::showMessage('info',$message,$params,$this->path);
+        return $this->omegaLog->showMessage('info',$message,$params,$this->path);
 
     }
 
@@ -148,7 +150,7 @@ class OmegaLog implements LoggerInterface
     public function debug($message=null, array $params = array())
     {
 
-        return OmegaCore::showMessage('debug',$message,$params,$this->path);
+        return $this->omegaLog->showMessage('debug',$message,$params,$this->path);
 
     }
 
@@ -164,7 +166,7 @@ class OmegaLog implements LoggerInterface
     public function log($level, $message=null, array $params = array())
     {
 
-        return OmegaCore::showMessage($level,$message,$params,$this->path);
+        return $this->omegaLog->showMessage($level,$message,$params,$this->path);
 
     }
 
