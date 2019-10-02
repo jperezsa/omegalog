@@ -4,7 +4,6 @@ Simple Logs for PHP developers.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
@@ -16,7 +15,7 @@ Change Permisions to the folder for 775
 
 ### Installing
 
-Whit Composer
+Install with composer
 ```
 composer require probyte/omegalog
 ```
