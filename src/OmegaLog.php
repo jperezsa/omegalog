@@ -5,17 +5,12 @@ namespace omega\omegalog;
 use omega\omegalog\OmegaCore;
 
 
-/**
- * OmegaLog guarda logs de tus proyectos en php, en archivos de texto.
- * Puede recibir un prefijo personalizado y un directorio personalizado.
- * Los archivos se guardan con el nombre del archivo donde se utilice OmegaLog y La fecha en formato Ymd.
- * 
- * Ideal para imprimir texto plano, variables, arreglos u objetos en PHP.
- * 
+/*
  * @author Jorge Perez <jorge.perez@sisma.cl>
  * @copyright 2019
  * @license MIT
  */
+
 class OmegaLog implements LoggerInterface
 {
     private $prefix;
