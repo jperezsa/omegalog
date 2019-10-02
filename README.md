@@ -18,7 +18,7 @@ Change Permisions to the foler for 775
 
 Whit Composer
 ```
-Give the example
+composer require omega/omegalog
 ```
 
 
