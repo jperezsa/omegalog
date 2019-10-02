@@ -1,5 +1,5 @@
 <?php
-namespace omega\omegalog;
+namespace probyte\omegalog;
 
 use \DateTimeZone;
 use \Datetime;

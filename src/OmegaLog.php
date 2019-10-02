@@ -1,8 +1,8 @@
 <?php
 
-namespace omega\omegalog;
+namespace probyte\omegalog;
 
-use omega\omegalog\OmegaCore;
+use probyte\omegalog\OmegaCore;
 
 
 /*

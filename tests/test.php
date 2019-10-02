@@ -2,7 +2,7 @@
 
 require __DIR__."/../vendor/autoload.php";
 
-use \omega\omegalog\OmegaLog;
+use \probyte\omegalog\OmegaLog;
 
 
 $log = new OmegaLog();

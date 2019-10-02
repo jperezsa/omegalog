@@ -1,6 +1,6 @@
 <?php
 
-namespace omega\omegalog;
+namespace probyte\omegalog;
 
 interface LoggerInterface
 {
