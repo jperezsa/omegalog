@@ -18,17 +18,17 @@ class OmegaCore {
      *
      * @return void
      */
-    public function showMessage($level,$message,Array $params,$path)
+    public function showMessage($level,$message,$params,$path)
     {
-        if(is_array($message)){
-            $params = $message;
+
+        if(is_array($message) or \is_object($message)){
+            $params = array($message);
             $message = '';
         }
+
+        return error_log("[".self::datetimeFormat()."][".self::getIpClient()."][$level] {$message}\n".self::showArray($params),3,self::fileNameForLog($path));
         
-        return error_log("[".self::datetimeFormat()."] [".self::getIpClient()."] [$level] - {$message}\n".self::showArray($params),3,self::fileNameForLog($path));
-
     }
-
     /**
      * showArray
      *
@@ -38,12 +38,54 @@ class OmegaCore {
      */
     public function showArray(Array $array)
     {
-        if(empty($array)){
+        $param = '';
+   
+        foreach ($array as $value) {
+            $type = gettype($value);
+            switch ($type) {
+                case 'string':
+                    $param .= $value ."\n";
+                    break;
+                case 'object':
+                    $param .= print_r($value,TRUE);
+                    break;
+                case 'array':
+                    $param .= print_r($value,TRUE);
+                    break;
+                default:
+                    $param .= print_r($value,TRUE);
+                break;
+            }
+
+        }
+
+        if(empty($param)){
             
             return null;
         }
 
-        return print_r($array,true);
+        return $param;
+
+    }
+
+
+    /**
+     * showObject
+     *
+     * @param  mixed $object
+     *
+     * @return void
+     */
+    public function showObject($object)
+    {
+        if(empty($object)){
+            return null;
+        }else{
+            if(\is_object($object)){
+
+                return print_r($object,true);
+            }
+        }
 
     }
 
